@@ -1,0 +1,69 @@
+﻿@using EntityLayer.Concrete
+@model List<Addres>
+@{
+    ViewData["Title"] = "Adress";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <h4 class="font-weight-semi-bold mb-4">Adres Bilgilerim</h4>
+                               <div class="card border-secondary mb-5">
+
+                                   @foreach(var item in Model)
+                                   {
+                    <div class="card-header bg-secondary border-0">
+                        <h4 style="margin:left" class="font-weight-semi-bold m-0">@item.Title</h4>
+                     <a style="margin-left:95%" href="/Profile/DeleteAdress/@item.AddresId"><span class="w-50">Sil</span></a>
+                    </div>
+                    <div class="card-body">
+              <p>@item.Title</p>
+              <p>@item.Descritpion</p>
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                       <a href="/Profile/AdressEdit/@item.AddresId"><button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Düzenle</button></a>
+                    </div>
+                    }
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+        @*       Burası sağ menü
+        *@
+
+        <div class="col-lg-4">
+            <div class="card border-secondary mb-5">
+                <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/Index">Kişisel Bilgilerim       </a> 
+                </div>
+                   <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/Adress">Adres Bilgilerim       </a> 
+                </div>
+                   <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/ChangePassword">Şifre Değiştir        </a> 
+                </div>
+                  <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/OldOrder">Geçmiş Sipraişlerim       </a> 
+                </div>
+             
+               
+
+
+
+
+
+    </div>
+
+</div>
+    </div>
+

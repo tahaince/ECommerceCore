@@ -1,0 +1,39 @@
+﻿@model ECommerceCore.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+<br>
+<br />
+
+<hr />
+<div class="row" style="margin-left:30%">
+    <div class="col-md-6">
+        <h2>Login</h2>
+        <br />
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail" class="form-control" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Remember" /> @Html.DisplayNameFor(model => model.Remember)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Giriş Yap" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

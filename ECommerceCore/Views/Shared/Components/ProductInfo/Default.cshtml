@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model List<Feature>
+ 
+<div class="tab-pane fade" id="tab-pane-2">
+                        <h4 class="mb-3">Özellikler</h4>
+                      @foreach(var item in Model)
+                      {
+
+                      
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0">
+                                       @item.FeatureName
+                                    </li>
+                                  
+                                  </ul> 
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush bg-dark">
+                                    <li class="list-group-item px-0">
+                                       @item.FeatureValue
+                                    </li>
+                                   
+                                  </ul> 
+                            </div>
+                        </div>
+                        }
+                    </div>

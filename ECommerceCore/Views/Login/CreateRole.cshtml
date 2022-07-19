@@ -1,0 +1,12 @@
+﻿@model EntityLayer.Concrete.AppRole
+@{
+    ViewData["Title"] = "CreateRole";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<h1>CreateRole</h1>
+
+<form asp-action="CreateRole">
+    <input asp-for="Name" />
+    <button type="submit">Oluştur</button>
+</form>

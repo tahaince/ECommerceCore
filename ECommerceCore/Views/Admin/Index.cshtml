@@ -1,0 +1,45 @@
+﻿@using EntityLayer.Concrete
+@model List<Comment>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Bu sayfa admin sayfasıdır.</h1>
+    <br />
+
+<table class="table table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>Ad</td>
+            <td>Mesaj</td>
+            <td>Ürün</td>
+
+        </tr>
+
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.CommentId</td>
+                <td>@item.AppUserId</td>
+                <td>@item.Message</td>
+                <td>@item.ProductId</td>
+
+
+            </tr>
+
+          }
+
+    </table>
+
+
+
+</body>
+</html>

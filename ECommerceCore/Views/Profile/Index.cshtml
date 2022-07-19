@@ -1,0 +1,80 @@
+﻿@model SignUpViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <h4 class="font-weight-semi-bold mb-4">Profilim</h4>
+                <form asp-action="EditUser">
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label>Kullanıcı Adı</label>
+                            <input class="form-control" type="text" placeholder="" name="UserName" value="@Model.UserName">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label>Ad</label>
+                            <input class="form-control" type="text" placeholder="" name="Name" value="@Model.Name">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Soyad</label>
+                            <input class="form-control" type="text" placeholder="" name="Surname" value="@Model.Surname">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>E-mail</label>
+                            <input class="form-control" type="email" placeholder="example@email.com" name="Email" value="@Model.Email">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Telefon No</label>
+                            <input class="form-control" type="number" placeholder="+123 456 789" name="PhoneNumber" value="@Model.PhoneNumber">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>TC No</label>
+                            <input class="form-control" type="text" placeholder="+123 456 789" name="TCNO" value="@Model.TCNO">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Doğum Tarihi </label>
+                            <input class="form-control" type="text" placeholder="+123 456 789" name="Date" value="@Model.Date">
+                        </div>
+                        <button class="btn btn-block" style="background-color:green">Güncelle</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        @*       Burası sağ menü
+        *@
+
+        <div class="col-lg-4">
+            <div class="card border-secondary mb-5">
+                <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/Index">Kişisel Bilgilerim       </a> 
+                </div>
+                   <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/Adress">Adres Bilgilerim       </a> 
+                </div>
+                   <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/ChangePassword">Şifre Değiştir        </a> 
+                </div>
+                  <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/OldOrder">Geçmiş Sipraişlerim       </a> 
+                </div>
+             
+               
+
+
+
+
+
+    </div>
+
+</div>
+    </div>
+
+

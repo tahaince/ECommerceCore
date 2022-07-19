@@ -1,0 +1,40 @@
+﻿@model ECommerceCore.Models.JsonModels.ProductJson
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Apideneme</title>
+</head>
+<body>
+
+    <table class="table table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>Ad</td>
+            <td>Fiyat</td>
+
+        </tr>
+
+        @foreach(var item in Model.ProductListe)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+
+
+            </tr>
+
+          }
+
+    </table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿@model EntityLayer.Concrete.Addres
+
+
+@{
+    ViewData["Title"] = "AddAdress";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+
+
+
+
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <h4 class="font-weight-semi-bold mb-4">Adres Ekle</h4>
+                <form asp-action="AddAdress">
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label>Adres Başlığı</label>
+                            <input class="form-control" type="text" placeholder="Adres Başlığı" asp-for="Title" >
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label>Açık Adres</label>
+                            <input class="form-control" type="text" placeholder="Adres Açıklaması" asp-for="Descritpion" >
+                        </div>
+                     
+                        <button class="btn btn-danger">Ekle</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        @*       Burası sağ menü
+        *@
+
+        <div class="col-lg-4">
+            <div class="card border-secondary mb-5">
+                <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/Index">Kişisel Bilgilerim       </a> 
+                </div>
+                   <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/Adress">Adres Bilgilerim       </a> 
+                </div>
+                   <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/ChangePassword">Şifre Değiştir        </a> 
+                </div>
+                  <div class="card-header bg-secondary border-1">
+                <a class="btn btn-block" href="/Profile/OldOrder">Geçmiş Sipraişlerim       </a> 
+                </div>
+             
+               
+
+
+
+
+
+    </div>
+
+</div>
+    </div>
+
+
+
